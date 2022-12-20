@@ -1,15 +1,15 @@
-package kh.s17.ac.member.model;
+package kh.s17.ac.Cart.model;
 
 import java.sql.Connection;
 import java.util.List;
 
 import common.jdbc.jdbcTemplate;
 
-public class MemberService {
-	private MemberDao dao = new MemberDao();
+public class CartService {
+	private CartDao dao = new CartDao();
 
 //	insert - 등록
-	public int insert(MemberVo vo) {
+	public int insert(CartVo vo) {
 		int result = 0;
 		Connection conn = jdbcTemplate.getConnection();
 		result = dao.insert(conn, vo);
@@ -18,26 +18,26 @@ public class MemberService {
 	}
 
 //	update - 수정
-	public int update(MemberVo vo, String memberId/* 주로 PK */) {
+	public int update(CartVo vo, String pName/* 주로 PK */) {
 		int result = 0;
 		Connection conn = jdbcTemplate.getConnection();
-		result = dao.update(conn, vo, memberId);
+		result = dao.update(conn, vo, pName);
 		jdbcTemplate.close(conn);
 		return result;
 	}
 
 //	delete  - 삭제
-	public int delete(String memberId/* 주로 PK */) {
+	public int delete(String pName/* 주로 PK */) {
 		int result = 0;
 		Connection conn = jdbcTemplate.getConnection();
-		result = dao.delete(conn, memberId);
+		result = dao.delete(conn, pName);
 		jdbcTemplate.close(conn);
 		return result;
 	}
 
 //	selectList  - 목록조회
-	public List<MemberVo> selectList() {
-		List<MemberVo> volist = null;
+	public List<CartVo> selectList() {
+		List<CartVo> volist = null;
 		Connection conn = jdbcTemplate.getConnection();
 		volist = dao.selectList(conn);
 		jdbcTemplate.close(conn);
@@ -45,10 +45,10 @@ public class MemberService {
 	}
 
 //	selectOne - 상세조회
-	public MemberVo selectOne(String memberId/* 주로 PK */) {
-		MemberVo vo = null;
+	public CartVo selectOne(String pName/* 주로 PK */) {
+		CartVo vo = null;
 		Connection conn = jdbcTemplate.getConnection();
-		vo = dao.selectOne(conn, memberId);
+		vo = dao.selectOne(conn, pName);
 		jdbcTemplate.close(conn);
 		return vo;
 	}

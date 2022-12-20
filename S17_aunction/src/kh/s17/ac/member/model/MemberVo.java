@@ -1,92 +1,122 @@
 package kh.s17.ac.member.model;
 
-import java.sql.Date;  // 중요 
+
 
 public class MemberVo {
-//	MID       NOT NULL VARCHAR2(30)  
-//	MPWD      NOT NULL VARCHAR2(20)  
-//	MNAME     NOT NULL VARCHAR2(100) 
-//	MEMAIL    NOT NULL VARCHAR2(100) 
-//	MENTRANCE NOT NULL DATE          
-//	MAUTHCODE NOT NULL VARCHAR2(20)  
-//	MCONSENT1 NOT NULL NUMBER(3)     
-//	MTYPE     NOT NULL NUMBER(1)     
-//	BUSNO              VARCHAR2(30)  
-	private String mid;
-	private String mpwd;
-	private String mname;
-	private String memail;
-	private Date mentrance;
-	private String mauthcode;
-	private int mconsent1;
-	private int mtype;
-	//BusinessInfoVo 사용하지 않고 분리해서 사용
-	private String busno;
+	
+	private String memberId;
+	private String memberName;
+	private int memberPassward;
+	private int memberPhonenumber;
+	private String memberEmail;
+	private String tradeName;
+	private String businessRegistrationNumber;
+	private String representative;
+	private int membertype;
 	
 	public MemberVo() {
 		super();
 	}
+	
+	
+
+	public String getTradeName() {
+		return tradeName;
+	}
+
+
+
+	public void setTradeName(String tradeName) {
+		this.tradeName = tradeName;
+	}
+
+
+
+	public String getBusinessRegistrationNumber() {
+		return businessRegistrationNumber;
+	}
+
+
+
+	public void setBusinessRegistrationNumber(String businessRegistrationNumber) {
+		this.businessRegistrationNumber = businessRegistrationNumber;
+	}
+
+
+
+	public String getRepresentative() {
+		return representative;
+	}
+
+
+
+	public void setRepresentative(String representative) {
+		this.representative = representative;
+	}
+
+
+
+	public int getMembertype() {
+		return membertype;
+	}
+
+
+
+	public void setMembertype(int membertype) {
+		this.membertype = membertype;
+	}
+
+
+
 	@Override
 	public String toString() {
-		return "MemberVo [mid=" + mid + ", mpwd=" + mpwd + ", mname=" + mname + ", memail=" + memail + ", mentrance="
-				+ mentrance + ", mauthcode=" + mauthcode + ", mconsent1=" + mconsent1 + ", mtype=" + mtype + ", busno="
-				+ busno + "]";
-	}
-	public String getMid() {
-		return mid;
-	}
-	public void setMid(String mid) {
-		this.mid = mid;
-	}
-	public String getMpwd() {
-		return mpwd;
-	}
-	public void setMpwd(String mpwd) {
-		this.mpwd = mpwd;
-	}
-	public String getMname() {
-		return mname;
-	}
-	public void setMname(String mname) {
-		this.mname = mname;
-	}
-	public String getMemail() {
-		return memail;
-	}
-	public void setMemail(String memail) {
-		this.memail = memail;
-	}
-	public Date getMentrance() {
-		return mentrance;
-	}
-	public void setMentrance(Date mentrance) {
-		this.mentrance = mentrance;
-	}
-	public String getMauthcode() {
-		return mauthcode;
-	}
-	public void setMauthcode(String mauthcode) {
-		this.mauthcode = mauthcode;
-	}
-	public int getMconsent1() {
-		return mconsent1;
-	}
-	public void setMconsent1(int mconsent1) {
-		this.mconsent1 = mconsent1;
-	}
-	public int getMtype() {
-		return mtype;
-	}
-	public void setMtype(int mtype) {
-		this.mtype = mtype;
-	}
-	public String getBusno() {
-		return busno;
-	}
-	public void setBusno(String busno) {
-		this.busno = busno;
+		return "MemberVo [memberId=" + memberId + ", memberName=" + memberName + ", memberPassward=" + memberPassward
+				+ ", memberPhonenumber=" + memberPhonenumber + ", memberEmail=" + memberEmail + ", tradeName="
+				+ tradeName + ", businessRegistrationNumber=" + businessRegistrationNumber + ", representative="
+				+ representative + ", membertype=" + membertype + "]";
 	}
 
 
+
+	public String getMemberId() {
+		return memberId;
+	}
+
+	public void setMemberId(String memberId) {
+		this.memberId = memberId;
+	}
+
+	public String getMemberName() {
+		return memberName;
+	}
+
+	public void setMemberName(String memberName) {
+		this.memberName = memberName;
+	}
+
+	public int getMemberPassward() {
+		return memberPassward;
+	}
+
+	public void setMemberPassward(int memberPassward) {
+		this.memberPassward = memberPassward;
+	}
+
+	public int getMemberPhonenumber() {
+		return memberPhonenumber;
+	}
+
+	public void setMemberPhonenumber(int memberPhonenumber) {
+		this.memberPhonenumber = memberPhonenumber;
+	}
+
+	public String getMemberEmail() {
+		return memberEmail;
+	}
+
+	public void setMemberEmail(String memberEmail) {
+		this.memberEmail = memberEmail;
+	}
+	
 	
 }
