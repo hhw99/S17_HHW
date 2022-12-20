@@ -6,7 +6,7 @@ public class MemberVo {
 	
 	private String memberId;
 	private String memberName;
-	private int memberPassward;
+	private String memberPassword;
 	private int memberPhonenumber;
 	private String memberEmail;
 	private String tradeName;
@@ -70,7 +70,7 @@ public class MemberVo {
 
 	@Override
 	public String toString() {
-		return "MemberVo [memberId=" + memberId + ", memberName=" + memberName + ", memberPassward=" + memberPassward
+		return "MemberVo [memberId=" + memberId + ", memberName=" + memberName + ", memberPassword=" + memberPassword
 				+ ", memberPhonenumber=" + memberPhonenumber + ", memberEmail=" + memberEmail + ", tradeName="
 				+ tradeName + ", businessRegistrationNumber=" + businessRegistrationNumber + ", representative="
 				+ representative + ", membertype=" + membertype + "]";
@@ -94,12 +94,12 @@ public class MemberVo {
 		this.memberName = memberName;
 	}
 
-	public int getMemberPassward() {
-		return memberPassward;
+	public String getMemberPassword() {
+		return memberPassword;
 	}
 
-	public void setMemberPassward(int memberPassward) {
-		this.memberPassward = memberPassward;
+	public void setMemberPassword(String memberPassword) {
+		this.memberPassword = memberPassword;
 	}
 
 	public int getMemberPhonenumber() {
