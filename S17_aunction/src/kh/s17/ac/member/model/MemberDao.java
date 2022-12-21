@@ -1,7 +1,11 @@
 package kh.s17.ac.member.model;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.List;
+
+import common.jdbc.jdbcTemplate;
 
 public class MemberDao {
 	// insert
@@ -40,6 +44,34 @@ public class MemberDao {
 //	selectOne - 상세조회
 	public MemberVo selectOne(Connection conn, String memberId/* 주로 PK */) {
 		MemberVo vo = null;
+		return vo;
+	}
+// login
+	public MemberVo login(Connection conn, String memberId, String memberPassword) {
+		MemberVo vo = null;
+	
+		String query = "select memberId, memberName, membertype from MEMBER where memberId=? and memberPassword=?";
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		try {
+			pstmt = conn.prepareStatement(query);
+			pstmt.setString(1, memberId);
+			pstmt.setString(2, memberPassword);
+			rs = pstmt.executeQuery();
+			if(rs.next()) {
+				vo = new MemberVo();
+				vo.setMemberId(rs.getString("memberId"));
+				vo.setMemberName(rs.getString("memberName"));
+				vo.setMembertype(rs.getInt("mebmerType"));
+				
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			jdbcTemplate.close(rs);
+			jdbcTemplate.close(pstmt);
+		}
+		
 		return vo;
 	}
 }

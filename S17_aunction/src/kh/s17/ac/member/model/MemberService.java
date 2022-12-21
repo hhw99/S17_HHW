@@ -52,4 +52,13 @@ public class MemberService {
 		jdbcTemplate.close(conn);
 		return vo;
 	}
+
+
+	public MemberVo login(String memberId, String memberPassword) {
+		MemberVo vo = null;
+		Connection conn = jdbcTemplate.getConnection();
+		vo = dao.login(conn, memberId, memberPassword);
+		jdbcTemplate.close(conn);
+		return vo;
+	}
 }

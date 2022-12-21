@@ -19,6 +19,13 @@ public class MemberVo {
 	}
 	
 	
+	@Override
+	public String toString() {
+		return "MemberVo [memberId=" + memberId + ", memberName=" + memberName + ", memberPassword=" + memberPassword
+				+ ", memberPhonenumber=" + memberPhonenumber + ", memberEmail=" + memberEmail + ", tradeName="
+				+ tradeName + ", businessRegistrationNumber=" + businessRegistrationNumber + ", representative="
+				+ representative + ", membertype=" + membertype + "]";
+	}
 
 	public String getTradeName() {
 		return tradeName;
@@ -68,13 +75,6 @@ public class MemberVo {
 
 
 
-	@Override
-	public String toString() {
-		return "MemberVo [memberId=" + memberId + ", memberName=" + memberName + ", memberPassword=" + memberPassword
-				+ ", memberPhonenumber=" + memberPhonenumber + ", memberEmail=" + memberEmail + ", tradeName="
-				+ tradeName + ", businessRegistrationNumber=" + businessRegistrationNumber + ", representative="
-				+ representative + ", membertype=" + membertype + "]";
-	}
 
 
 
