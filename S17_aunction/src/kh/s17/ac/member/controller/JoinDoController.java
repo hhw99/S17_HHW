@@ -7,10 +7,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import kh.s17.ac.member.model.MemberService;
+import kh.s17.ac.member.model.MemberVo;
+
 /**
  * Servlet implementation class JoinDoController
  */
-@WebServlet("/JoinDoController")
+@WebServlet("/Join.do")
 public class JoinDoController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -25,17 +28,30 @@ public class JoinDoController extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		String memberId = request.getParameter("id");
+		String memberPassword = request.getParameter("pw");
+		String memberName = request.getParameter("user_name");
+		String memberEmail = request.getParameter("user_name");
+		MemberVo vo = new MemberVo();
+		vo.setMemberId(memberId);
+		vo.setMemberPassword(memberPassword);
+		vo.setMemberName(memberName);
+		vo.setMemberEmail(memberEmail);
+
+		System.out.println(vo);
+		int result = new MemberService().insert(vo);
+		if (result>0) {
+			System.out.println("회원가입 성공");
+			response.sendRedirect(request.getContextPath()+"/login");
+		} else {
+			System.out.println("회원가입 실패");
+			response.sendRedirect(request.getContextPath()+"/main");
+		}
+
 	}
 
-}
+
+	}
+
+
