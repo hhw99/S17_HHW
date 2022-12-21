@@ -50,7 +50,7 @@ public class MemberDao {
 	public MemberVo login(Connection conn, String memberId, String memberPassword) {
 		MemberVo vo = null;
 	
-		String query = "select memberId, memberName, membertype from MEMBER where memberId=? and memberPassword=?";
+		String query = "select * from MEMBER where memberId=? and memberPassword=?";
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		try {
@@ -63,6 +63,12 @@ public class MemberDao {
 				vo.setMemberId(rs.getString("memberId"));
 				vo.setMemberName(rs.getString("memberName"));
 				vo.setMembertype(rs.getInt("mebmerType"));
+				vo.setMemberPassword(rs.getString("memberPassword"));
+				vo.setMemberEmail(rs.getString("memberEmail"));
+				vo.setTradeName(rs.getString("tradeName"));
+				vo.setBusinessRegistrationNumber(rs.getString("businessRegistrationNumber"));
+				vo.setRepresentative(rs.getString("representative"));
+				
 				
 			}
 		} catch (Exception e) {
