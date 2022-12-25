@@ -1,0 +1,324 @@
+.thumb-gallery .viewer img {
+    min-height: 400px;
+    min-width: 400px;
+    max-width: 600px;
+    max-height: 600px;
+    font-size: 0;
+    line-height: 0;
+    vertical-align: middle;
+    outline: none;
+    margin-top: 8px;
+}
+.item-topinfo .box__official-store {
+    margin-bottom: 24px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 0;
+}
+.item-topinfo .box__official-store .text__seller:only-child {
+    padding: 0;
+}
+.item-topinfo .box__official-store .text__seller {
+    display: -webkit-inilne-flex;
+    display: inline-flex;
+    position: relative;
+    box-sizing: border-box;
+    max-width: 100%;
+    padding-left: 8px;
+    font-size: 16px;
+    line-height: 22px;
+    color: #1e2732;
+    vertical-align: top;
+}
+.item-topinfo .itemtit {
+    overflow: hidden;
+    margin-bottom: 7px;
+    font-size: 28px;
+    font-weight: 400;
+    color: #222222;
+    line-height: 36px;
+    word-break: break-all;
+}
+.item-topinfo .box__item-made {
+    margin: 10px 0 8px;
+    font-size: 22px;
+    line-height: 30px;
+    color: #616161;
+    letter-spacing: -0.5px;
+}
+.item-topinfo .prod_info {
+    *overflow: hidden;
+    height: 20px;
+    font-size: 16px;
+    color: #222222;
+    line-height: 18px;
+    letter-spacing: -0.5px;
+    text-align: left;
+}
+.item-topinfo .prod_info .seller-awards {
+    float: left;
+    line-height: 20px;
+    vertical-align: top;
+}
+.item-topinfo .prod_info .division {
+    display: inline-block;
+    position: relative;
+    top: 1px;
+    float: left;
+    width: 1px;
+    height: 16px;
+    margin: 2px 13px;
+    background: url(//pics.auction.co.kr/pc/vip/line14_vipgroup.gif) 0 2px no-repeat;
+    font-size: 0;
+}
+.item-topinfo .prod_info .buy_num {
+    position: relative;
+    top: 1px;
+    float: left;
+    line-height: 20px;
+}
+.item-topinfo .prod_info .buy_num .remainder {
+    display: inline-block;
+    margin-left: 4px;
+    color: #999999;
+}
+.item-topinfo .price_wrap {
+    position: relative;
+    z-index: 20;
+    margin-top: 27px;
+}
+.item-topinfo .price {
+    position: relative;
+    margin-bottom: 27px;
+    font-size: 28px;
+    color: #000;
+    line-height: 36px;
+}
+.item-topinfo .price .sale {
+    float: left;
+    display: inline-block;
+    margin-top: 4px;
+    margin-right: 10px;
+    line-height: 48px;
+    height: 48px;
+    color: #e63740;
+    font-size: 48px;
+}
+.item-topinfo .price .price_innerwrap {
+    position: relative;
+    display: inline-block;
+}
+.item-topinfo .price .price_innerwrap .price_original {
+    display: block;
+    color: #999999;
+    font-size: 16px;
+    line-height: 18px;
+    text-decoration: line-through;
+}
+.item-topinfo .price .price_innerwrap .price_real {
+    display: block;
+    font-size: 30px;
+    color: #000;
+}
+.item-topinfo .price .price_innerwrap .price_real .unit {
+    display: inline-block;
+    margin-top: 0;
+    line-height: 37px;
+    vertical-align: top;
+}
+.item-topinfo .action-btns .interest_area {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.item-topinfo .action-btns .sns_area {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.item-topinfo .action-btns .sns_area {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.item-topinfo .action-btns .sare-sns {
+    background-position: -200px -135px;
+}
+.item-topinfo .action-btns button {
+    display: inline-block;
+    overflow: hidden;
+    width: 48px;
+    height: 48px;
+}
+.tit_options {
+    position: relative;
+    height: 22px;
+    margin: 0 0 5px 0;
+    padding: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #222222;
+    letter-spacing: -0.5px;
+    line-height: 22px;
+}
+.item_quantitywrap {
+    overflow: hidden;
+    margin: 5px 0 3px;
+}
+.item_quantitywrap .num-ctrl {
+    position: relative;
+    float: left;
+    width: 126px;
+    height: 39px;
+    margin-right: 8px;
+    display: inline-block;
+}
+
+.item_quantitywrap .bt_increase {
+    right: 0;
+    top: 0;
+}
+.item_quantitywrap .bt_increase, .item_quantitywrap .bt_decrease {
+    display: inline-block;
+    width: 39px;
+    height: 39px;
+    position: absolute;
+}
+.item_quantitywrap .bt_increase, .item_quantitywrap .bt_decrease, .item_quantitywrap .num {
+    float: left;
+}
+.sp, .sp_vipgroup, .sp--after:after, .location-navi .bt_view-ctrl, .thumb-gallery .prev, .thumb-gallery .next, .item-topinfo .action-btns button, .item-topinfo_sub .nav .arr, .vip-content .ad_infobox, .vip-content .item_options .arr, .shop-bestitems .prev, .shop-bestitems .next, .shop-infobox .power-dealer, .shop-infobox .cus-satis-dealer, .shop-infobox button, .shop-infobox .btn_gostore, .vip-group_list .seloption, .vip-group_list .add-interest, .adlinks_sponsor .go_link span, .vip-content .item_result .bt_increase, .vip-content .item_result .bt_decrease, .vip-detailoption_wrap .btn_cart, .vip-detailoption_wrap .btn_buy, .adlinks_sponsor li .num, .vip-content .item_result .btns button, .vip-group_list .btns button, .item-topinfo .shopurl em, .reportbox .bt_report, .item-topinfo_sub .benefit_item .ic, .reportbox .bt_report, .vip-togetheritems .next, .vip-togetheritems .prev, .con .icon, .box__prodnoti-more .button__prodnoti-more:after, .box__detail-more .button__detail-more:after, .item_quantitywrap .bt_increase, .item_quantitywrap .bt_decrease, .item-topinfo_sub .freebie_item .text__freebie:before, .sp_vipgroup--before:before, .sp_vipgroup--after:after {
+    background: url(//pics.auction.co.kr/pc/vip/sp_vipgroup.png?v=20220427) no-repeat;
+}
+.vip-content button {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+.blind {
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    top: -999em;
+    left: 0;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+.item_quantitywrap .bt_increase {
+    right: 0;
+    top: 0;
+    background-position: -571px -460px;
+    border: none;
+}
+.item_quantitywrap .bt_decrease {
+    background-position: -700px -374px;
+}
+.item_quantitywrap .bt_decrease {
+    left: 0;
+    top: 0;
+    border: none;
+}
+.item_quantitywrap .bt_increase, .item_quantitywrap .bt_decrease {
+    display: inline-block;
+    width: 39px;
+    height: 39px;
+    position: absolute;
+}
+.item_quantitywrap .bt_increase, .item_quantitywrap .bt_decrease, .item_quantitywrap .num {
+    float: left;
+}
+.vip-content button {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+.item_quantitywrap .num {
+    margin-left: 38px;
+    border: 1px solid #ccc;
+    background: #fff;
+    width: 48px;
+    height: 35px;
+    padding: 1px 0;
+    color: #222;
+    font-size: 16px;
+    text-align: center;
+    line-height: 34px;
+    overflow: hidden;
+}
+.item_quantitywrap .item_btn-confirm {
+    display: inline-block;
+    border: 1px solid #ccc;
+    width: 67px;
+    height: 34px;
+    line-height: 33px;
+    padding-bottom: 3px;
+    text-align: center;
+    background: none;
+    color: #222;
+    font-size: 16px;
+    letter-spacing: -0.4px;
+    box-sizing: content-box;
+}
+.item-bottombtns {
+    font-size: 0;
+    line-height: 0;
+}
+.item-bottombtns button:first-child {
+    margin-right: 10px;
+}
+.item-bottombtns .btn_cart {
+    background: #ffffff;
+    border: 1px solid #222222;
+    color: #222222;
+    vertical-align: top;
+}
+.item-bottombtns button {
+    display: inline-block;
+    width: 270px;
+    height: 60px;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 60px;
+    letter-spacing: -0.5px;
+}
+.item-bottombtns .btn_buy {
+    background: #e63740;
+    color: #ffffff;
+    border: none;
+}
+.item-bottombtns button {
+    display: inline-block;
+    width: 270px;
+    height: 60px;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 60px;
+    letter-spacing: -0.5px;
+}
+.item-topinfowrap, .vip-tabnavi ul, .vip-tabcontent .innerwrap, .vip-tab_container {
+    width: 1200px;
+    margin: 0 auto;
+}
+.item-topinfowrap {
+    zoom: 1;
+}
+.item-topgallerywrap {
+    position: relative;
+    float: left;
+    width: 600px;
+    margin-right: 50px;
+}
+.thumb-gallery {
+    position: relative;
+    width: 600px;
+    height: 752px;
+    text-align: center;
+}
+.thumb-gallery .box__viewer-container {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+}

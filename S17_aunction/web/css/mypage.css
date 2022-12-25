@@ -1,0 +1,82 @@
+.mini_header_faq {
+    position: relative;
+    z-index: 11;
+    height: 58px;
+    background: url(//pics.auction.co.kr/myauction/mini_header/2014/bg_mini_header.gif) repeat-x 0 0;
+    line-height: 58px;
+    *line-height: 40px;
+    vertical-align: top;
+    width: 975px;
+    margin-left: 435px;
+    margin-top: 50px;
+}
+a {
+    color: #333333;
+    text-decoration: none;
+}
+.mini_header_faq img {
+    margin: 18px 0 0 20px;
+}
+.mini_header_faq {
+    position: relative;
+    z-index: 11;
+    height: 58px;
+    background: url(//pics.auction.co.kr/myauction/mini_header/2014/bg_mini_header.gif) repeat-x 0 0;
+    line-height: 58px;
+    *line-height: 40px;
+    vertical-align: top;
+}
+.uxc-myauction-list-block h3 {
+    float: left;
+    font-size: 100%;
+    line-height: 1;
+}
+.uxc-myauction-list-block h3 {
+    float: left;
+    font-size: 100%;
+    line-height: 1;
+}
+.uxc-myauction-list-block .view-option {
+    float: right;
+}
+.uxc-tit-area {
+    overflow: hidden;
+    width: 100%;
+    padding-bottom: 5px;
+    margin-left: 580px;
+    margin-top: 67px;
+}
+.acacac {
+    position: absolute;
+    margin-top: 330px;
+    margin-left: 425px;
+}
+.order-list-table {
+    table-layout: fixed;
+    width: 45%;
+    border-collapse: separate;
+    border-top: 2px solid #594f4f;
+    border-bottom: 1px solid #999;
+    margin-top: 50px;
+    margin-left: 580px;
+    height: 500px;
+
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+.order-list-table td {
+    padding: 18px 0;
+    border-top: 1px solid #ddd;
+    vertical-align: top;
+    text-align: center;
+    font-size: 12px;
+}
+.order-list-table td {
+    padding: 18px 0;
+    border-top: 1px solid #ddd;
+    vertical-align: top;
+    text-align: center;
+    font-size: 12px;
+}

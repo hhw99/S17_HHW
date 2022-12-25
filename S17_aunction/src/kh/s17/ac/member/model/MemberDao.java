@@ -19,6 +19,22 @@ public class MemberDao {
 //	insert - 등록
 	public int insert(Connection conn, MemberVo vo) {
 		int result = 0;
+		String sql = "insert into member values(?, ?, ?, ?)";
+		PreparedStatement pstmt = null;
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, vo.getMemberId());
+			pstmt.setString(2, vo.getMemberPassword());
+			pstmt.setString(3, vo.getMemberName());
+			pstmt.setString(4, vo.getMemberEmail());
+
+			result = pstmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			jdbcTemplate.close(pstmt);
+		}
 		return result;
 	}
 

@@ -1,0 +1,273 @@
+#ibody {
+    position: relative;
+}
+#header, #body {
+    margin: 0 auto;
+    width: 980px;
+    position: relative;
+}
+.hp_side_banner {
+    width: 1160px;
+    position: absolute;
+    top: 0;
+    left: -90px;
+    z-index: 10030;
+}
+.flashad_view_left {
+    position: absolute;
+    z-index: 10030;
+    top: 0;
+    left: 90px;
+    overflow: hidden;
+}
+.hp_side_banner .side_banner1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10030;
+    width: 82px;
+    height: 240px;
+}
+a {
+    color: #333333;
+    text-decoration: none;
+}
+a img {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+}
+.hp_side_banner .side_banner1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10030;
+    width: 82px;
+    height: 240px;
+}
+.hp_side_banner .side_banner2 {
+    position: absolute;
+    top: 246px;
+    left: 0;
+    z-index: 10030;
+    width: 82px;
+    height: 141px;
+}
+.hp_side_banner .side_banner3 {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    z-index: 10030;
+    width: 82px;
+    height: 387px;
+    overflow: hidden;
+}
+.top_mini_banner {
+    width: 155px;
+    margin-top: 306px;
+    text-align: center;
+    float: left;
+    position: relative;
+    z-index: 1;
+}
+a img {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+}
+.hp_allkill {
+    padding: 30px 0 0;
+    font-family: 'Malgun gothic',맑은고딕,dotum,돋움;
+}
+.hp_allkill .allkill_title {
+    position: relative;
+    margin-bottom: 20px;
+    height: 28px;
+    font-size: 13px;
+    color: #222;
+    text-align: center;
+}
+.hp_allkill .tit {
+    display: inline-block;
+    width: 158px;
+    height: 28px;
+    background: url(//pics.auction.co.kr/pc/hp/new_homepage.png) no-repeat;
+    text-indent: -9999em;
+}
+.hp_allkill .allkill_title a.bt_more {
+    display: block;
+    position: absolute;
+    top: 9px;
+    right: 0;
+    font-family: 'Malgun gothic',맑은고딕,dotum,돋움;
+    font-size: 13px;
+    color: #777777;
+}
+.bt_more {
+    background: url(//pics.auction.co.kr/pc/hp/new_homepage.png) no-repeat right 4px;
+    padding-right: 9px;
+}
+.item_list_type1, .item_list_type1 div.inner {
+    position: relative;
+}
+.pnum {
+    position: absolute;
+    top: -42px;
+    left: 588px;
+    font-size: 18px;
+    font-family: 'Malgun Gothic',맑은고딕,dotum,돋움;
+    color: #999;
+    line-height: 21px;
+}
+.pnum em {
+    color: #000;
+}
+.hp_allkill .item_list_type1 div.touchSlider-box {
+    height: 560px;
+}
+.item_list_wrap {
+    overflow: hidden;
+    font-family: tahoma,Malgun Gothic,'맑은 고딕';
+}
+.item_list_wrap .item_list:first-child {
+    margin-top: 0;
+}
+.item_list_wrap .item_list {
+    overflow: hidden;
+    width: 980px;
+    margin: 10px;
+}
+.item_list_wrap .item_list li:first-child {
+    margin-left: 0;
+}
+.item_list_wrap .item_list li {
+    float: left;
+    width: 320px;
+}
+.item_list_wrap .item_list .inner {
+    position: relative;
+    border: 1px solid #eee;
+    background: #fff;
+}
+.item_list_wrap .item_list .inner a {
+    display: block;
+}
+.item_list_wrap .item_list .thumb {
+    width: 318px;
+    height: 165px;
+}
+a img {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+}
+.item_list_wrap .item_list .title {
+    display: block;
+    overflow: hidden;
+    height: 19px;
+    margin: 12px 13px 0;
+    font-size: 15px;
+    color: #222;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-decoration: none;
+    letter-spacing: 0;
+}
+.item_list_wrap .item_list .info {
+    position: relative;
+    padding: 4px 13px 0;
+}
+.item_list_wrap .item_list .sale {
+    display: inline-block;
+    margin-right: 4px;
+    font-size: 20px;
+    color: #e63740;
+    vertical-align: top;
+}
+.item_list_wrap .item_list .sale strong {
+    font-weight: normal;
+}
+.item_list_wrap .item_list .sale span {
+    overflow: hidden;
+    position: absolute;
+    top: -999em;
+    left: -999em;
+}
+.item_list_wrap .item_list .price {
+    display: inline-block;
+}
+.item_list_wrap .item_list .price strong {
+    font-size: 20px;
+    color: #222;
+}
+.item_list_wrap .item_list .price strong span {
+    position: relative;
+    top: -1px;
+    padding-right: 5px;
+    font-size: 12px;
+    font-weight: normal;
+    letter-spacing: -1px;
+    vertical-align: middle;
+}
+.item_list_wrap .item_list .price del {
+    position: relative;
+    top: -2px;
+    font-size: 12px;
+    color: #999;
+}
+.item_list_wrap .item_list .tags {
+    display: block;
+    height: 18px;
+    margin: 10px -1px 0;
+    padding: 8px 1px 10px;
+    border-top: 1px solid #f3f3f3;
+}
+.item_list_wrap .item_list .tag {
+    display: inline-block;
+    height: 17px;
+    color: #666;
+    font-size: 11px;
+    line-height: 17px;
+}
+.item_list_wrap .item_list .tag .ico_sm {
+    width: 14px;
+    height: 14px;
+    margin-top: -2px;
+    vertical-align: middle;
+}
+.item_list_wrap .item_list .tag {
+    display: inline-block;
+    height: 17px;
+    color: #666;
+    font-size: 11px;
+    line-height: 17px;
+}
+.item_list_wrap .item_list .tag .ico_bar {
+    display: inline-block;
+    position: relative;
+    top: -1px;
+    width: 1px;
+    height: 12px;
+    margin: 0 7px 0 8px;
+    background: #ebebeb;
+    vertical-align: middle;
+}
+.item_list_wrap .item_list .option {
+    position: absolute;
+    bottom: 11px;
+    right: 14px;
+}
+.item_list_wrap .item_list .option .buy {
+    display: inline-block;
+    font-size: 11px;
+    color: #666;
+    line-height: 16px;
+}
+.item_list_wrap .item_list .option .buy strong {
+    font-weight: normal;
+    color: #2e8de5;
+}
+

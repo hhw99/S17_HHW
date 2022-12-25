@@ -7,7 +7,7 @@ public class CartVo {
 	private int price;
 	private String pID;
 	private String memberId;
-	private String bmemberId;
+
 
 	public CartVo() {
 		super();
@@ -15,7 +15,7 @@ public class CartVo {
 	@Override
 	public String toString() {
 		return "CartVo [pName=" + pName + ", amount=" + amount + ", price=" + price + ", pID=" + pID + ", memberId="
-				+ memberId + ", bmemberId=" + bmemberId + "]";
+				+ memberId + "]";
 	}
 
 	public String getpName() {
@@ -58,12 +58,6 @@ public class CartVo {
 		this.memberId = memberId;
 	}
 
-	public String getBmemberId() {
-		return bmemberId;
-	}
-
-	public void setBmemberId(String bmemberId) {
-		this.bmemberId = bmemberId;
-	}
+	
 
 }

@@ -1,0 +1,144 @@
+.box__title .text__title {
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: -0.5px;
+    margin-left: 315px;
+    margin-top: 20px;
+}
+.box__tab {
+    width: 100%;
+}
+.service__cart .box__inner-content {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+}
+.box__tab .list-item__cart-type-group {
+    overflow: auto;
+    width: auto;
+    margin-top: 20px;
+}
+.box__tab .list-item__cart-type-group .list__tab.list--active {
+   list-style: none;
+   margin-left: 275px;
+    
+}
+.box__tab .list-item__cart-type-group .list__tab {
+    float: left;
+    width: 200px;
+    background: #202024;
+    position: relative;
+}
+.box__tab .list-item__cart-type-group .link__tab {
+    display: block;
+    text-align: center;
+    padding: 12px 0;
+    vertical-align: middle;
+    line-height: 30px;
+}
+a {
+    color: #333333;
+    text-decoration: none;
+}
+.box__tab .list-item__cart-type-group .list__tab.list--active .text__tab {
+    font-weight: bold;
+}
+.box__tab .list-item__cart-type-group .text__tab {
+    display: inline-block;
+    margin-right: 5px;
+    letter-spacing: -0.5px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: normal;
+    vertical-align: top;
+    line-height: 30px;
+}
+.for-a11y {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    text-indent: -5000em;
+}
+.box__tab .list-item__cart-type-group .list__tab.list--active .text__count {
+    background: #fff;
+}
+.box__tab .list-item__cart-type-group .text__count {
+    display: inline-block;
+    background: #4c4c4f;
+    border-radius: 30px;
+    min-width: 22px;
+    height: auto;
+    vertical-align: top;
+    line-height: 16px;
+    text-align: center;
+    padding: 7px 4px;
+}
+
+.box__tab .list-item__cart-type-group .text__num {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    vertical-align: top;
+    line-height: 16px;
+    letter-spacing: -0.5px;
+}
+.for-a11y {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    text-indent: -5000em;
+}
+.service__cart .box__inner-content {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+}
+.box__cart-empty {
+    text-align: center;
+    padding: 300px 0;
+}
+.box__cart-empty .text__message {
+    display: block;
+    padding-top: 60px;
+    font-size: 15px;
+    line-height: 20px;
+    color: #91949a;
+    font-weight: normal;
+}
+.service__cart .image__empty-cart {
+    background: url(//pics.auction.co.kr/pc/single/cart/ico-cart-empty@2x.png) no-repeat top center;
+    background-size: 59px auto;
+}
+.box__cart-empty .link__historyback {
+    width: auto;
+    height: auto;
+    line-height: 44px;
+    background: #fff;
+    border: 1px solid #cbcdd0;
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 52px;
+    line-height: 20px;
+}
+a {
+    color: #333333;
+    text-decoration: none;
+}
+.box__cart-empty .text__back {
+    color: #28292e;
+    line-height: 20px;
+    letter-spacing: -0.5px;
+    font-size: 15px;
+    font-weight: bold;
+}

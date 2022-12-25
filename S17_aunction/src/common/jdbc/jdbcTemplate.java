@@ -18,7 +18,7 @@ public class jdbcTemplate {
 			System.out.println(currentPath);
 			prop.load(new BufferedReader(new FileReader(currentPath+"driver.properties")));
 			Class.forName(prop.getProperty("db.driver"));
-			conn = DriverManager.getConnection(prop.getProperty("db.url"), prop.getProperty("db.user"), prop.getProperty("db.pwd") );
+			conn = DriverManager.getConnection(prop.getProperty("jdbc:oracle:thin:@127.0.0.1:1521:xe"), prop.getProperty("S17"), prop.getProperty("S17") );
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

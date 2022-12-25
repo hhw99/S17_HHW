@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class CartController
  */
-@WebServlet("/CartController")
+@WebServlet("/cart")
 public class CartController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -26,16 +26,8 @@ public class CartController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		String viewPath="WEB-INF/view/cart.jsp";
+		request.getRequestDispatcher(viewPath).forward(request, response);
 	}
 
 }

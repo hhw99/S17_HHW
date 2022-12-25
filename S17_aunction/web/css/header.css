@@ -1,0 +1,375 @@
+#header_wrap {
+    position: relative;
+    z-index: 10020;
+}
+.footer *, #header_wrap * {
+    font-family: "굴림", Gulim, dotum, 돋움, Tahoma, sans-serif;
+    box-sizing: content-box;
+}
+#core_lnb {
+    position: relative;
+    height: 27px;
+    background-color: #fff;
+    font-size: 11px;
+    letter-spacing: -1px;
+    z-index: 100000;
+}
+#core_lnb .lnb_container {
+    position: relative;
+    margin: 0 auto;
+}
+#accessibility, .lnb_container, .header_container, .gnb_container {
+    width: 980px !important;
+}
+#core_lnb h1 {
+    margin: 0;
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    font-size: 12px;
+    line-height: 1em;
+}
+#core_lnb h1 a {
+    display: block;
+}
+#core_lnb h1 img {
+    width: 214px;
+    height: 80px;
+    vertical-align: middle;
+}
+#header_wrap .layout_left {
+    float: left;
+}
+#header_wrap .layout_right {
+    float: right;
+    position: relative;
+    z-index: 1;
+}
+#core_lnb .usermsg {
+    float: left;
+    height: 18px;
+    margin-top: 7px;
+    margin-right: 10px;
+    font-size: 11px;
+    color: #777;
+}
+#core_lnb .usermenu {
+    float: left;
+}
+#core_lnb .usermenu > ul {
+    margin: 0;
+    padding: 0;
+}
+#core_lnb .usermenu > ul > li:first-child {
+    background: none;
+}
+
+#core_lnb .usermenu > ul > li > a {
+    display: inline-block;
+    padding: 0 8px;
+    margin-top: 7px;
+    margin-top: 8px \9;
+    text-decoration: none;
+    font-size: 11px;
+    color: #777;
+    line-height: 15px;
+    font-family: dotum, 돋움, "굴림", Gulim, Tahoma, sans-serif;
+}
+#core_lnb .usermenu > ul > li {
+    float: left;
+    background: url(//pics.auction.co.kr/pc/common/header/header.png) -140px -152px no-repeat;
+}
+#header_wrap li {
+    list-style: none;
+}
+#core_header {
+    height: 80px;
+    background: #fff;
+    z-index: 10000;
+}
+#core_gnb {
+    width: 100%;
+    height: 47px;
+    margin-bottom: -2px;
+    background: url(//pics.auction.co.kr/pc/common/header/header.png) repeat-x 0 -275px;
+    font-size: 12px;
+    line-height: 120%;
+    font-family: "굴림",Gulim, Tahoma,sans-serif;
+    color: #333;
+}
+
+#core_gnb .gnb_container {
+    position: relative;
+    min-width: 900px;
+    margin: 0 auto;
+}
+#header_wrap .layout_left {
+    float: left;
+}
+#core_gnb .corenavi {
+    position: relative;
+    float: left;
+}
+#core_gnb .corenavi.navi_allmenu a.navi_opener {
+    padding-left: 0px;
+    cursor: pointer;
+}
+#core_gnb .corenavi.navi_allmenu a.navi_opener > span {
+    width: 98px;
+    background-position: 0 -760px;
+}
+#core_gnb .corenavi a.navi_opener .ico_arrow {
+    position: relative;
+    top: -1px;
+}
+#core_gnb .corenavi.navi_allmenu .navi_dropdown {
+    width: 155px;
+}
+#core_gnb .corenavi .navi_dropdown {
+    position: absolute;
+    top: 43px;
+    left: 0;
+    background: #fff;
+    font-size: 12px;
+    line-height: 120%;
+    font-family: "굴림", Gulim, Tahoma, sans-serif;
+    color: #333;
+    z-index: 1;
+}
+.allmenu {
+    position: relative;
+    width: 153px;
+    border: 1px solid #2f3345;
+    border-bottom: none;
+    background: #000;
+    height: 307px;
+}
+.allmenu > ul {
+    margin: 0;
+    padding: 0;
+}
+#header_wrap li {
+    list-style: none;
+}
+.allmenu a.allmenu_cate10 {
+    background-position: 0 -397px;
+}
+.allmenu > ul > li > a {
+    padding: 0;
+    display: block;
+    width: 152px;
+    height: 38px;
+    position: relative;
+    z-index: 5;
+    background: url(//pics.auction.co.kr/pc/common/header/header.png) no-repeat 0 0;
+    overflow: hidden;
+    cursor: default;
+    line-height: 1;
+    text-indent: -1000px;
+    font-size: 0;
+}
+.allmenu .allmenu_depth2_group {
+    position: absolute;
+    left: 152px;
+    top: -1px;
+    width: 824px;
+    height: 405px;
+    border: 1px solid #000000;
+    background: #fff;
+    z-index: 4;
+    font-size: 12px;
+}
+#core_gnb .corenavi.primary {
+    margin-left: 6px;
+    margin-top: 12px;
+}
+#header_wrap .layout_right {
+    float: right;
+    position: relative;
+    z-index: 1;
+}
+#core_gnb .corenavi.navi_latest {
+    width: auto;
+}
+#core_gnb .corenavi.navi_latest {
+    width: auto;
+}
+#core_gnb .corenavi.navi_latest a.navi_opener > span {
+    width: 67px;
+    background-position: 0 -900px;
+}
+#core_gnb .corenavi a.navi_opener .ico_arrow {
+    position: relative;
+    top: -1px;
+}
+#core_gnb .corenavi.navi_latest .navi_dropdown {
+    left: auto;
+    right: 0;
+    width: 697px;
+    height: 392px;
+    border: 1px solid #2f3345;
+}
+#core_gnb .corenavi.navi_latest .column1 {
+    float: left;
+    width: 183px;
+    height: 100%;
+    padding: 0 0 0 12px;
+}
+#core_gnb .corenavi.navi_latest .column_latest_key {
+    height: 222px;
+}
+#core_gnb .corenavi.navi_latest .column_tit {
+    padding: 19px 0 12px 0;
+    font-weight: bold;
+    letter-spacing: -1px;
+    color: #333;
+    font-family: "굴림", Gulim, Tahoma, sans-serif;
+}
+#core_gnb .noresult {
+    color: #9b9b9b;
+    letter-spacing: -0.08em;
+    line-height: 1.6em;
+    font-family: "굴림", Gulim, Tahoma, sans-serif;
+}
+#core_header .core_search .search_input_keyword {
+    width: 355px;
+    height: 26px;
+    margin: 4px 0 0 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-position: 10px 6px;
+    border: 0 none;
+    outline: 0 none;
+    color: #000000;
+    font-size: 18px;
+    font-family: 'Malgun Gothic', "맑은고딕", "굴림", Gulim, dotum, "돋움", Tahoma, sans-serif;
+    line-height: 25px;
+    font-weight: bold;
+    vertical-align: top;
+}
+#core_header .core_search .search_btn_ok {
+    position: absolute;
+    right: 0;
+    top: 3px;
+    display: block;
+    width: 22px;
+    height: 29px;
+    border: none;
+    background: url(//pics.auction.co.kr/pc/common/header/header.png) -212px -90px no-repeat;
+    text-indent: -10000em;
+    overflow: hidden;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+#core_header .core_search .search_inner {
+    position: relative;
+    width: 400px;
+    height: 32px;
+    border-bottom: 4px solid #e63740;
+    margin-left: 660px;
+    margin-top: 11px;
+}
+#core_gnb .corenavi.primary {
+    margin-left: 6px;
+}
+#core_gnb .corenavi.primary li a.primary_1 {
+    background-position: -140px -760px;
+}
+#core_gnb .corenavi.primary li a {
+    overflow: visible;
+    position: relative;
+    display: block;
+    width: 61px;
+    height: 13px;
+    background: url(//pics.auction.co.kr/pc/common/header/header.png) 0 0 no-repeat;
+    text-indent: -10000em;
+    font-size: 0;
+    line-height: 0;
+}
+#core_gnb .corenavi.primary li a.primary_2 {
+    background-position: -140px -780px;
+}
+#core_gnb .corenavi.primary li a.primary_3 {
+    background-position: -140px -840px;
+}
+#core_gnb .corenavi.primary li a.primary_4 {
+    background-position: -140px -820px;
+}
+#core_gnb .corenavi.primary li a.primary_5 {
+    width: 85px;
+    background-position: -140px -860px;
+}
+#core_gnb .corenavi a.navi_opener {
+    position: relative;
+    display: inline-block;
+    height: 17px;
+    padding: 14px 12px 13px 13px;
+    text-decoration: none;
+    z-index: 2;
+}
+#core_gnb .corenavi a.navi_opener > span {
+    display: inline-block;
+    height: 17px;
+    background: url(//pics.auction.co.kr/pc/common/header/header.png) 0 0 no-repeat;
+    vertical-align: middle;
+    text-indent: -10000em;
+    overflow: hidden;
+}
+#header_wrap .layout_left {
+    float: left;
+}
+#core_gnb .corenavi.primary li {
+    float: left;
+    position: relative;
+    margin-top: 3px;
+    padding: 0 15px;
+}
+#core_gnb .corenavi.primary li:first-child {
+    background: none;
+}
+.allmenu a.allmenu_cate10 {
+    background-position: 0 -397px;
+}
+.allmenu a.allmenu_cate01 {
+    background-position: 0 -430px;
+}
+.allmenu a.allmenu_cate02 {
+    background-position: 0 -464px;
+}
+.allmenu a.allmenu_cate03 {
+    background-position: 0 -498px;
+}
+.allmenu a.allmenu_cate04 {
+    background-position: 0 -532px;
+}
+.allmenu a.allmenu_cate05 {
+    background-position: 0 -566px;
+}
+.allmenu a.allmenu_cate06 {
+    background-position: 0 -600px;
+}
+.allmenu a.allmenu_cate07 {
+    background-position: 0 -634px;
+}
+
+
+
+
+.navi_dropdown{
+    position: relative;
+    display: inline-block;
+}
+
+#allmenu{
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+
+#allmenu a{
+    display: block;
+}
+
+.navi_dropdown:hover #allmenu{
+    display: block;
+}

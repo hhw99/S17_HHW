@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class JoinController
  */
-@WebServlet("/Join")
+@WebServlet("/join")
 public class JoinController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -26,7 +26,7 @@ public class JoinController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String viewPath="WEB-INF/view/member/join.jsp";
+		String viewPath="WEB-INF/view/join.jsp";
 		request.getRequestDispatcher(viewPath).forward(request, response);
 	}
 

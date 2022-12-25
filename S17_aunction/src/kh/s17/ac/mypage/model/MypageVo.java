@@ -5,7 +5,6 @@ public class MypageVo {
 	private String field;
 	private String memberInformation;
 	private String memberId;
-	private String bmemberId;
 	private String modifyingInformation;
 	
 	public MypageVo() {
@@ -15,7 +14,7 @@ public class MypageVo {
 	@Override
 	public String toString() {
 		return "MypageVo [field=" + field + ", memberInformation=" + memberInformation + ", memberId=" + memberId
-				+ ", bmemberId=" + bmemberId + ", modifyingInformation=" + modifyingInformation + "]";
+				+ ",, modifyingInformation=" + modifyingInformation + "]";
 	}
 
 
@@ -48,15 +47,6 @@ public class MypageVo {
 		this.memberId = memberId;
 	}
 
-
-	public String getBmemberId() {
-		return bmemberId;
-	}
-
-
-	public void setBmemberId(String bmemberId) {
-		this.bmemberId = bmemberId;
-	}
 
 
 	public String getModifyingInformation() {

@@ -1,0 +1,42 @@
+.tit-join {
+    height: 54px;
+    margin-top: 9px;
+    padding: 20px 0 0 20px;
+    background: url(//pics.auction.co.kr/join/bg_h2_tit.gif) repeat-x;
+    width: 52%;
+    margin-left: 435px;
+}
+
+img {
+    border: 0;
+}
+.licensee, .freemember, .identi-cert, .info-enter, .terms-agree {
+    padding: 0 20px;
+}
+ .inner {
+    padding: 32px 0 3px;
+    margin-left: 410px;
+}
+.licensee h3, .freemember h3, .identi-cert h3, .info-enter h3, .terms-agree h3 {
+    float: left;
+    width: 282px;
+}
+.licensee .info-cont, .info-enter .info-cont, .freemember .info-cont {
+    float: none;
+    margin-left: 282px;
+}
+ul, ol {
+    list-style: none;
+}
+.info-enter .info-cont>ul>li {
+    padding-bottom: 18px;
+}
+.licensee_entry input[type=text], .join_state input[type=text], .info-enter .info-cont input[type=text], .info-enter .info-cont input[type=password], .userBsBb input[type=text] {
+    padding: 4px 0 7px 11px;
+    border-top: 1px solid #999;
+    border-right: 1px solid #e2e2e2;
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #aaa;
+    font: 13px Malgun Gothic,Dotum;
+    color: #767676;
+}

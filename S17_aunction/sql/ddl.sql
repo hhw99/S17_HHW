@@ -12,7 +12,7 @@ CREATE TABLE "MEMBER" (
 	"tradeName"	varchar2(100)		NULL,
 	"businessRegistrationNumber"	varchar2(100)		NULL,
 	"representative"	varchar2(100)		NULL,
-	"membertype"	number(1)	DEFAULT 1	NOT NULL
+	"membertype"	number(1)	DEFAULT 1   NULL
 );
 
 COMMENT ON COLUMN "MEMBER"."membertype" IS '일반회원,2사업자';

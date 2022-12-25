@@ -1,0 +1,114 @@
+.footer {
+    width: 100% !important;
+    border-top: 1px solid #ddd;
+    margin-top: 25px;
+    color: #333;
+    font-size: 11px;
+    line-height: 18px;
+    font-family: Dotum, '돋움', sans-serif;
+    letter-spacing: -1px;
+    text-align: left;
+    background: #f7f7f7;
+}
+.footer .footer-block-cs {
+    border-top: 0;
+    background: #f7f7f7;
+    letter-spacing: 0;
+    
+}
+.footer .footer-block {
+    padding: 15px 20px;
+}
+.footer .footer-container {
+    width: 980px;
+    margin: 0 auto;
+}
+.footer h2 {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+.footer .footer-section-first {
+    width: 341px;
+}
+.footer .footer-section {
+    float: left;
+    width: 294px;
+   
+} 
+/* do */
+.footer .footer-section-first .footer-section-inner {
+    padding-left: 0;
+    border-left: 0;
+    
+}
+.footer .footer-section h3 {
+    margin: 1px 0 8px;
+    font-size: 12px;
+    line-height: 15px;
+    font-family: Gulim, '굴림', sans-serif;
+    font-weight: bold;
+    color: #333;
+ 
+}
+.footer .footer-section h3 > a {
+    font-family: Gulim, '굴림', sans-serif;
+    padding-right: 8px;
+    background: url(//pics.auction.co.kr/common/footer/link_arrow_title.gif) no-repeat 100% 2px;
+}
+.footer address {
+    visibility: visible;
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    font-size: 11px;
+    line-height: 18px;
+    font-family: Gulim, '굴림', sans-serif;
+}
+.footer *, #header_wrap * {
+    font-family: "굴림", Gulim, dotum, 돋움, Tahoma, sans-serif;
+    box-sizing: content-box;
+    text-decoration-line: none;
+}
+.footer li {
+    line-height: inherit;
+    font-weight: normal;
+    font-family: Gulim, '굴림', sans-serif;
+}
+.footer em, .footer strong, .footer em a, .footer strong a {
+    color: #2677de;
+}
+.footer a {
+    color: #333;
+}
+.footer .footer-section-first + .footer-section {
+    width: 343px;
+}
+.footer .footer-section-first + .footer-section .footer-section-inner {
+    padding-left: 36px;
+}
+ul, ol {
+    list-style: none;
+}
+.footer .footer-section {
+    float: left;
+    width: 294px;
+}
+.footer .footer-block-copyright {
+    font-size: 11px;
+    letter-spacing: -1px;
+    color: #666;
+    line-height: 17px;
+    margin-top: 90px;
+    margin-left: 78px;
+}
+.footer .footer-block-copyright .footer-container {
+    background: none;
+}
+

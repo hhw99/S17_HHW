@@ -13,7 +13,7 @@ import kh.s17.ac.member.model.MemberVo;
 /**
  * Servlet implementation class JoinDoController
  */
-@WebServlet("/Join.do")
+@WebServlet("/join.do")
 public class JoinDoController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -32,7 +32,7 @@ public class JoinDoController extends HttpServlet {
 		String memberId = request.getParameter("id");
 		String memberPassword = request.getParameter("pw");
 		String memberName = request.getParameter("user_name");
-		String memberEmail = request.getParameter("user_name");
+		String memberEmail = request.getParameter("email");
 		MemberVo vo = new MemberVo();
 		vo.setMemberId(memberId);
 		vo.setMemberPassword(memberPassword);
