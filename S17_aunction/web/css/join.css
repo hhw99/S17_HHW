@@ -40,3 +40,23 @@ ul, ol {
     font: 13px Malgun Gothic,Dotum;
     color: #767676;
 }
+.box__buttons .button__submit {
+    font-family: 'Noto Sans Korean';
+    font-weight: bold;
+    float: left;
+    display: inline-block;
+    width: 215px;
+    height: 48px;
+    margin: 0;
+    padding: 0;
+    line-height: 48px;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    background-color: #E63740;
+    border: 1px solid #E63740;
+    box-sizing: border-box;
+    margin-top: 50px;
+    margin-left: 260px;
+}
+

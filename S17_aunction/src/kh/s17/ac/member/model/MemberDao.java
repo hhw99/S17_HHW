@@ -19,14 +19,15 @@ public class MemberDao {
 //	insert - 등록
 	public int insert(Connection conn, MemberVo vo) {
 		int result = 0;
-		String sql = "insert into member values(?, ?, ?, ?)";
+//		String sql = "insert into member (memberName, mebmerId, memberPassword, memberEmail) values(?, ?, ?, ?)";
+		String sql = "insert into member values(?, ?, ?, ? , null, null, null, default)";
 		PreparedStatement pstmt = null;
 		
 		try {
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, vo.getMemberId());
-			pstmt.setString(2, vo.getMemberPassword());
-			pstmt.setString(3, vo.getMemberName());
+			pstmt.setString(1, vo.getMemberName());
+			pstmt.setString(2, vo.getMemberId());
+			pstmt.setString(3, vo.getMemberPassword());
 			pstmt.setString(4, vo.getMemberEmail());
 
 			result = pstmt.executeUpdate();
@@ -65,7 +66,9 @@ public class MemberDao {
 // login
 	public MemberVo login(Connection conn, String memberId, String memberPassword) {
 		MemberVo vo = null;
-	
+		System.out.println("####### LOGIN DAO");
+		System.out.println(memberId);
+		System.out.println(memberPassword);
 		String query = "select * from MEMBER where memberId=? and memberPassword=?";
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
@@ -84,7 +87,7 @@ public class MemberDao {
 				vo.setTradeName(rs.getString("tradeName"));
 				vo.setBusinessRegistrationNumber(rs.getString("businessRegistrationNumber"));
 				vo.setRepresentative(rs.getString("representative"));
-				
+				System.out.println("로그인 성공= DAO");
 				
 			}
 		} catch (Exception e) {

@@ -30,15 +30,20 @@ public class LoginDoController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String memberId = request.getParameter("memberId");
-		String membePassword = request.getParameter("membePassword");
+		String memberId = request.getParameter("id");
+		String memberPassword = request.getParameter("password");
+		System.out.println("####### LOGIN Controller");
+		System.out.println(memberId);
+		System.out.println(memberPassword);
 		
 		MemberService service = new MemberService();
-		MemberVo loginInfo = service.login(memberId, membePassword);
-		
+		MemberVo loginInfo = service.login(memberId, memberPassword);
+		if(loginInfo != null) {
 			System.out.println("로그인 성공");
 			request.getSession().setAttribute("loginSsInfo", loginInfo);
 			response.sendRedirect(request.getContextPath()+"/main");
-		
-}
+		} else {
+			System.out.println("로그인 실패");
+		}
+	}
 }

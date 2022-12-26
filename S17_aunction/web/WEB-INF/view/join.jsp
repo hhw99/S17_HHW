@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +20,7 @@
         <div id="core_lnb">
             <div class="lnb_container">
                 <h1 class="logo">
-                    <a href="https://www.auction.co.kr">
+                   <a href="${pageContext.request.contextPath }/main">
                         <img alt="옥션" src="//image.auction.co.kr/hanbando/202110/d337d318-1aeb-4902-abf7-e407d7f0d1a1.png">
                     </a>
                 </h1>
@@ -30,12 +31,18 @@
                     <div class="usermsg"></div>
                     <div class="usermenu">
                         <ul>
-                            <li id="headerloginveiw"><a href="https://memberssl.auction.co.kr/authenticate/">로그인</a></li>
-                            <li id="headermemberenter" style=""><a onclick="log(this)" href="https://memberssl.auction.co.kr/membership/signup/choicemembertype.aspx">회원가입</a></li>
-                            <li><a href="https://cart.auction.co.kr/ko/pc/cart/">장바구니</a></li>
-                            <li><a href="https://memberssl.auction.co.kr/myauction/">마이옥션</a></li>
-                            <li><a href="http://member.auction.co.kr/help/home.aspx">고객센터</a></li>
-                            <li><a href="https://sell3.auction.co.kr/sellbasic/sellbasicbridge.aspx" target="_blank">판매하기</a></li>
+                          <c:choose>
+					<c:when test="${empty loginSsInfo}"><li id="headerloginveiw"><a href="${pageContext.request.contextPath }/login">로그인</a></li>
+								<li id="headermemberenter" style=""><a onclick="log(this)" href="${pageContext.request.contextPath }/join">회원가입</a></li></c:when>
+					<c:otherwise>														
+					<li><a>${loginSsInfo.memberName }</a><li>					
+					<li><a href="${pageContext.request.contextPath }/logout">로그아웃</a></li></c:otherwise>
+							</c:choose>		
+								
+								<li><a href="${pageContext.request.contextPath }/cart">장바구니</a></li>
+								<li><a href="${pageContext.request.contextPath }/mypage">마이옥션</a></li>
+								<li><a href="http://member.auction.co.kr/help/home.aspx">고객센터</a></li>
+								<li><a href="https://sell3.auction.co.kr/sellbasic/sellbasicbridge.aspx" target="_blank">판매하기</a></li>
                         </ul>
                     </div>
                 </div>
@@ -117,21 +124,22 @@
         <div class="inner">
 <!-- [D] 이미지 변경 726.2014-11-13 -->
 <h3><img alt="정보입력" src="https://pics.auction.co.kr/join/h3_tit_info_enter02.gif"></h3>
+              <form action="<%=request.getContextPath() %>/join.do" method="post">
             <div class="info-cont">
                 <ul>
-                    <li class="entername_area">
-                        <input name="txt_name" type="text" id="txt_name" class="enter-name placeholder" value="이름" style="width:427px;" maxlength="12" title="이름" placeholder="이름" onfocus="if(this.value == '이름') 	this.value = '';">
-                    </li> 
                     <li class="enterid_area">
-                        <input name="txt_enterid" type="text" id="txt_enterid" onkeyup="SetTickCount(600);" placeholder="아이디" value="아이디" maxlength="12" class="enter-id placeholder" onblur="FocusOut_IDForm(this)" style="width:427px;" onfocus="FocusIn_IDForm(this);" title="아이디">
+                        <input name="id" type="text" id="txt_enterid" onkeyup="SetTickCount(600);" placeholder="아이디" value="아이디" maxlength="12" class="enter-id placeholder" onblur="FocusOut_IDForm(this)" style="width:427px;" onfocus="FocusIn_IDForm(this);" title="아이디">
 
                         <!-- 사용가능한 아이디인 경우 input에 class="usable" 추가, 아이디가 조건에 맞지않는 경우 class="incorrect" 추가 -->
                         <!--p id="tickcount">tickcount =</p-->
                         <p class="txt01" style="display:none">사용가능한 아이디입니다.</p><!-- 사용가능한 아이디인 경우 -->
                         <p class="txt02" style="display:none">아이디를 넣어주세요.</p><!-- 아이디가 조건에 맞지않는 경우 -->
                     </li>
+                    <li class="entername_area">
+                        <input name="user_name" type="text" id="txt_name" class="enter-name placeholder" value="이름" style="width:427px;" maxlength="12" title="이름" placeholder="이름" onfocus="if(this.value == '이름') 	this.value = '';">
+                    </li> 
                     <li class="enterpw_area">
-                        <input name="txt_enterpw" type="password" id="txt_enterpw" value= 비밀번호 onfocus="FocusIn_PwdForm(this);" onkeyup="validatePasswordType(this);" maxlength="15" class="enter-pw placeholder" onblur="FocusOut_PwdForm(this)" style="width:427px;" onkeydown="CheckKeyInput(this);" title="비밀번호 입력">
+                        <input name="pw" type="password" id="txt_enterpw" value= 비밀번호 onfocus="FocusIn_PwdForm(this);" onkeyup="validatePasswordType(this);" maxlength="15" class="enter-pw placeholder" onblur="FocusOut_PwdForm(this)" style="width:427px;" onkeydown="CheckKeyInput(this);" title="비밀번호 입력">
                         <!-- 비밀번호가 안전한 경우 input에 class="usable" 추가, 비밀번호가 조건에 맞지않는 경우 class="incorrect" 추가 -->
                         <p class="txt01" style="display:none">완벽한 비밀번호 입니다.</p><!-- 비밀번호가 안전한 경우 -->
                         <p class="txt02" style="display:none" id="password_err">유추하기 쉬운 비밀번호 입니다.</p><!-- 비밀번호가 조건에 맞지않는 경우 -->
@@ -140,18 +148,9 @@
                         <p style="display:none" class="txt02" id="password_confirm_err">비밀번호가 일치하지 않습니다.</p><!-- 비밀번호가 조건에 맞지않는 경우 -->
                     </li>
                     <li>
-
-
-
-                       
-                        <input name="mobile_tel1" type="text" id="mobile_tel1" style="width:123px;" maxlength="4" title="휴대폰 앞자리 입력" value= 휴대폰 onkeyup="CheckNumberWithKeyupEvent(this);">   <span class="dash">-</span> 
-                        <input name="mobile_tel2" type="text" id="mobile_tel2" style="width:123px;" maxlength="4" title="휴대폰 중간자리 입력" onkeyup="CheckNumberWithKeyupEvent(this);"> <span class="dash">-</span> 
-                        <input name="mobile_tel3" type="text" id="mobile_tel3" style="width:123px;" maxlength="4" title="휴대폰 뒷자리 입력" onkeyup="CheckNumberWithKeyupEvent(this);">
-                    </li>
-                    <li>
-                        <input name="email1" type="text" id="email1" onkeyup="CheckDuplicatedEmail();" placeholder="이메일" value="이메일" class="placeholder" onchange="CheckDuplicatedEmail();" style="width:120px;" onfocus="CheckDuplicatedEmail();" title="이메일"> 
+                        <input name="email" type="text" id="email1" onkeyup="CheckDuplicatedEmail();" placeholder="이메일" value="이메일" class="placeholder" onchange="CheckDuplicatedEmail();" style="width:120px;" onfocus="CheckDuplicatedEmail();" title="이메일"> 
                         <span class="gol">@</span> 
-                        <input name="email1" type="text" id="email1" onkeyup="CheckDuplicatedEmail();" placeholder="이메일" value="이메일" class="placeholder" onchange="CheckDuplicatedEmail();" style="width:180px;" onfocus="CheckDuplicatedEmail();" title="이메일"> 
+                        <input name="email" type="text" id="email1" onkeyup="CheckDuplicatedEmail();" placeholder="이메일" value="이메일" class="placeholder" onchange="CheckDuplicatedEmail();" style="width:180px;" onfocus="CheckDuplicatedEmail();" title="이메일"> 
                        
                         <input name="email2" type="text" id="email2" title="이메일 계정 입력" onkeyup="CheckDuplicatedEmail();" onchange="CheckDuplicatedEmail();" style="width:123px; margin-right:7px; display:none;">
                         
@@ -166,8 +165,15 @@
                 </ul>
                 
             </div>
+            <div class="box__buttons">
+					<button type="submit" class="button__submit">회원가입</button>
+			</div>
+			</form>
         </div>
-    </div> 
+        
+    </div>
+     <br><br><br><br><br><br><br><br><br><br><br>
+     
     <div class="footer" role="contentinfo">
         <div class="footer-block footer-block-cs">
             <div class="footer-container">

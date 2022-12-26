@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +17,7 @@
         <div id="core_lnb"> 
             <div class="lnb_container">
                 <h1>
-                    <a href="http://through.auction.co.kr/common/SafeRedirect.aspx?cc=0AC0&amp;next=http://www.auction.co.kr/?redirect=1">
+                      <a href="${pageContext.request.contextPath }/main">
                         <img src="//pics.auction.co.kr/pc/renewal/common/header/logo_@2x.png" alt="AUCTION">
                     </a>
                 </h1>
@@ -27,12 +28,18 @@
                     <div class="usermsg"></div>
                     <div class="usermenu">
                         <ul>
-                            <li id="headerloginview"><a href="https://memberssl.auction.co.kr/authenticate/">로그인</a></li>
-                            <li id="headermemberenter" style=""><a onclick="log(this)" href="https://memberssl.auction.co.kr/membership/signup/choicemembertype.aspx">회원가입</a></li>
-                            <li><a href="https://cart.auction.co.kr/ko/pc/cart/">장바구니</a></li>
-                            <li><a href="https://memberssl.auction.co.kr/myauction/">마이옥션</a></li>
-                            <li><a href="http://member.auction.co.kr/help/home.aspx">고객센터</a></li>
-                            <li><a href="https://sell3.auction.co.kr/sellbasic/sellbasicbridge.aspx" target="_blank">판매하기</a></li>
+                        <c:choose>
+					<c:when test="${empty loginSsInfo}"><li id="headerloginveiw"><a href="${pageContext.request.contextPath }/login">로그인</a></li>
+								<li id="headermemberenter" style=""><a onclick="log(this)" href="${pageContext.request.contextPath }/join">회원가입</a></li></c:when>
+					<c:otherwise>														
+					<li><a>${loginSsInfo.memberName }</a><li>					
+					<li><a href="${pageContext.request.contextPath }/logout">로그아웃</a></li></c:otherwise>
+							</c:choose>		
+								
+								<li><a href="${pageContext.request.contextPath }/cart">장바구니</a></li>
+								<li><a href="${pageContext.request.contextPath }/mypage">마이옥션</a></li>
+								<li><a href="http://member.auction.co.kr/help/home.aspx">고객센터</a></li>
+								<li><a href="https://sell3.auction.co.kr/sellbasic/sellbasicbridge.aspx" target="_blank">판매하기</a></li>
                         </ul>
                     </div>
                 </div>

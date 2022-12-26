@@ -7,12 +7,11 @@ CREATE TABLE "MEMBER" (
 	"mebmerId"	varchar2(50)		NOT NULL,
 	"memberName"	varchar2(100)		NOT NULL,
 	"memberPassword"	varchar2(100)		NOT NULL,
-	"memberPhonenumber"	varchar2(100)		NOT NULL,
 	"memberEmail"	varchar2(100)		NOT NULL,
 	"tradeName"	varchar2(100)		NULL,
-	"businessRegistrationNumber"	varchar2(100)		NULL,
+    "businessRegistrationNumber"	varchar2(100)		NULL,
 	"representative"	varchar2(100)		NULL,
-	"membertype"	number(1)	DEFAULT 1   NULL
+	"membertype"	number(1)	DEFAULT 1	NULL
 );
 
 COMMENT ON COLUMN "MEMBER"."membertype" IS '일반회원,2사업자';

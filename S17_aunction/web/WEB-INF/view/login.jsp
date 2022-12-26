@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +16,7 @@
         <div id="core_lnb">
             <div class="lnb_container">
                 <h1 class="logo">
-                    <a href="https://www.auction.co.kr">
+                    <a href="${pageContext.request.contextPath }/main">
                         <img alt="옥션" src="//image.auction.co.kr/hanbando/202110/d337d318-1aeb-4902-abf7-e407d7f0d1a1.png">
                     </a>
                 </h1>
@@ -26,8 +27,13 @@
                     <div class="usermsg"></div>
                     <div class="usermenu">
                         <ul>
-                            <li id="headerloginveiw"><a href="https://memberssl.auction.co.kr/authenticate/">로그인</a></li>
-                            <li id="headermemberenter" style=""><a onclick="log(this)" href="https://memberssl.auction.co.kr/membership/signup/choicemembertype.aspx">회원가입</a></li>
+  				<c:choose>
+					<c:when test="${empty loginSsInfo}"><li id="headerloginveiw"><a href="${pageContext.request.contextPath }/login">로그인</a></li>
+								<li id="headermemberenter" style=""><a onclick="log(this)" href="${pageContext.request.contextPath }/join">회원가입</a></li></c:when>
+					<c:otherwise>														
+					<li><a>${loginSsInfo.memberName }</a><li>					
+					<li><a href="${pageContext.request.contextPath }/logout">로그아웃</a></li></c:otherwise>
+							</c:choose>		
                             <li><a href="https://cart.auction.co.kr/ko/pc/cart/">장바구니</a></li>
                             <li><a href="https://memberssl.auction.co.kr/myauction/">마이옥션</a></li>
                             <li><a href="http://member.auction.co.kr/help/home.aspx">고객센터</a></li>
@@ -129,7 +135,8 @@
                         <p class="text__message-error" id="login_error_11_12_13" style="display: none"><a href="javascript:goToAuth();" class="link__underline">본인인증 하러가기</a></p>
                     </div>
                     <p class="text__message-audlt sprite__login--before" id="login_adult" style="display: none;">청소년 유해매체물로서 19세 이상만 접근 가능합니다.<br>나이 확인을 위해 로그인해 주세요.</p>
-                    
+                     
+                     <form action="<%=request.getContextPath() %>/login.do" method="post">
                     <ul class="list__form-input">
                         <li class="list-item__form-input" data-index="0">
                             <!-- to.dev : validate check 메세지 노출 시 list-item__form-input--validate 클래스를 추가 해 주세요.-->
@@ -144,8 +151,10 @@
                             <button class="button__input-delete sprite__login">삭제</button>
                             <p class="text__validate-warning" style="display: none;">비밀번호를 입력해주세요.</p>
                         </li>
-                    </ul>
+                    </ul>                         
                     <button type="submit" class="button__submit1">로그인</button>
+                    </form>
+                    
                     <div class="box__login-action">
                         <div class="box__login-save">
                             <input name="checkboxKIDBase" type="checkbox" id="checkboxKIDBase" class="form__checkbox">
@@ -154,7 +163,6 @@
                         <div class="box__login-link">
                             <a href="http://through.auction.co.kr/Common/SafeRedirect.aspx?cc=0C42&amp;next=https%3a%2f%2fmemberssl.auction.co.kr%2fmembership%2fIDPW%2fFindID.aspx%3furl%3dhttp%253a%252f%252fwww.auction.co.kr%252f" target="_blank" class="link__login">아이디 찾기</a>
                             <a href="http://through.auction.co.kr/Common/SafeRedirect.aspx?cc=0C43&amp;next=https%3a%2f%2fmemberssl.auction.co.kr%2fmembership%2fIDPW%2fResetPassword.aspx%3furl%3dhttp%253a%252f%252fwww.auction.co.kr%252f" target="_blank" class="link__login">비밀번호 찾기</a>
-                            <a href="http://through.auction.co.kr/Common/SafeRedirect.aspx?cc=0C41&amp;next=https%3a%2f%2fmemberssl.auction.co.kr%2fmembership%2fsignup%2fChoiceMemberType.aspx%3fafterregisturl%3dhttp%253a%252f%252fwww.auction.co.kr%252f" target="_blank" class="link__login">회원가입</a>
                         </div>
                     </div>
         
