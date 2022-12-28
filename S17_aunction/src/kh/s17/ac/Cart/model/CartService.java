@@ -35,11 +35,11 @@ public class CartService {
 		return result;
 	}
 
-//	selectList  - 목록조회
-	public List<CartVo> selectList() {
+//	selectList  - 목록조회 memberid의 장바구니 목록조회
+	public List<CartVo> selectList(String memberid) {
 		List<CartVo> volist = null;
 		Connection conn = jdbcTemplate.getConnection();
-		volist = dao.selectList(conn);
+		volist = dao.selectList(conn, memberid);
 		jdbcTemplate.close(conn);
 		return volist;
 	}

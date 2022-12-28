@@ -13,14 +13,14 @@ public class CartDao {
 //	insert - 등록
 	public int insert(Connection conn, CartVo vo) {
 		int result = 0;
-		String sql ="INSERT INTO CART VALUES(?, ?, ?)";
+		String sql ="INSERT INTO CART (Amount, pid, memberid ) VALUES(?, ?, ?)";
 		PreparedStatement pstmt = null;
 		
 		try {
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, vo.getpName());
-			pstmt.setInt(2, vo.getAmount());
-			pstmt.setInt(3, vo.getPrice());
+			pstmt.setInt(1, vo.getAmount());
+			pstmt.setString(2, vo.getpID());
+			pstmt.setString(3, vo.getMemberId());
 
 			result = pstmt.executeUpdate();
 		} catch (Exception e) {
@@ -52,14 +52,15 @@ public class CartDao {
 		}
 		return result;
 	}
-//	selectList  - 목록조회
-	public List<CartVo> selectList(Connection conn){
+//	selectList  - 목록조회 memberid의 장바구니의 상품을 봄
+	public List<CartVo> selectList(Connection conn, String memberid){
 		List<CartVo> volist = null;
-		String sql = "select * from board";
+		String sql = "select * from (select * from CART where memberid=?) JOIN PRODUCT USING (PID)";
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		try {
 			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, memberid);
 			rs = pstmt.executeQuery();
 			if(rs.next()) {
 				volist = new ArrayList<CartVo>();
@@ -68,8 +69,9 @@ public class CartDao {
 					vo = new CartVo();
 					vo.setpName(rs.getString("pName"));
 					vo.setAmount(rs.getInt("amount"));
-					vo.setPrice(rs.getInt("price"));
+					vo.setPrice(rs.getInt("pprice"));
 					vo.setpID(rs.getString("pID"));
+					vo.setPimage(rs.getString("pimage"));
 					volist.add(vo);
 				} while(rs.next());
 			}

@@ -81,7 +81,7 @@ public class MemberDao {
 				vo = new MemberVo();
 				vo.setMemberId(rs.getString("memberId"));
 				vo.setMemberName(rs.getString("memberName"));
-				vo.setMembertype(rs.getInt("mebmerType"));
+				vo.setMembertype(rs.getInt("memberType"));
 				vo.setMemberPassword(rs.getString("memberPassword"));
 				vo.setMemberEmail(rs.getString("memberEmail"));
 				vo.setTradeName(rs.getString("tradeName"));

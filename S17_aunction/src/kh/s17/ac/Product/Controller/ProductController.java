@@ -7,6 +7,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import kh.s17.ac.Product.model.ProductService;
+import kh.s17.ac.Product.model.ProductVo;
+
 /**
  * Servlet implementation class ProductController
  */
@@ -26,6 +29,9 @@ public class ProductController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		ProductVo vo = new ProductService().selectOne("1");
+		
+		request.setAttribute("product", vo);
 		String viewPath="WEB-INF/view/product.jsp";
 		request.getRequestDispatcher(viewPath).forward(request, response);
 	}

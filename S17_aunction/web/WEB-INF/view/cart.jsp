@@ -9,13 +9,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/cart.css">
-    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="<%=request.getContextPath() %>/css/reset.css">
+    <link rel="stylesheet" href="<%=request.getContextPath() %>/css/header.css">
+    <link rel="stylesheet" href="<%=request.getContextPath() %>/css/cart.css">
+    <link rel="stylesheet" href="<%=request.getContextPath() %>/css/footer.css">
 </head>
 
 <body>
+${cartlist }<hr><hr>
+
     <div id="header_wrap">
         <div id="core_lnb">
             <div class="lnb_container">

@@ -1,8 +1,6 @@
 package kh.s17.ac.Product.Controller;
 
 import java.io.IOException;
-import java.util.List;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -13,17 +11,18 @@ import kh.s17.ac.Cart.model.CartService;
 import kh.s17.ac.Cart.model.CartVo;
 import kh.s17.ac.member.model.MemberVo;
 
+
 /**
- * Servlet implementation class CartController
+ * Servlet implementation class CartInsertDocontroller
  */
-@WebServlet("/cart")
-public class CartController extends HttpServlet {
+@WebServlet("/cart.do")
+public class CartInsertDocontroller extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public CartController() {
+    public CartInsertDocontroller() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -32,20 +31,39 @@ public class CartController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String memberid = "";
+		
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("여기 들어오나???????");
+//		String amountStr = request.getParameter("amount"); 
+		//TODO
+		int amount = 2;
+		
+//		String pID = request.getParameter("pid");
+		//TODO
+		String pID = "1";
+		String memberId = "";
 		MemberVo membervo = (MemberVo)(request.getSession().getAttribute("loginSsInfo"));
 		if(membervo != null) {
-			memberid = membervo.getMemberId();
+			memberId = membervo.getMemberId();
 		} else {
 			response.sendRedirect(request.getContextPath()+"/login");
 			return;
 		}
 		
-		List<CartVo> cartlist = new CartService().selectList(memberid);
+		CartVo vo = new CartVo();
+		vo.setpID(pID);
+		vo.setMemberId(memberId);
+		vo.setAmount(amount);
+		CartService service = new CartService();
+		int result = service.insert(vo);
+		System.out.println("result");
 		
-		request.setAttribute("cartlist", cartlist);
-		String viewPath="WEB-INF/view/cart.jsp";
-		request.getRequestDispatcher(viewPath).forward(request, response);
+		response.sendRedirect(request.getContextPath()+"/cart");
 	}
 
 }
