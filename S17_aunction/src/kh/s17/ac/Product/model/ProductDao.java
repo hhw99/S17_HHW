@@ -66,10 +66,22 @@ public class ProductDao {
 				volist = new ArrayList<ProductVo>();
 				do {
 					ProductVo vo = new ProductVo();
+//					PID          NOT NULL VARCHAR2(30)   
+//					PNAME        NOT NULL VARCHAR2(300)  
+//					PPRICE       NOT NULL NUMBER(10)     
+//					PDESCRIPTION          VARCHAR2(4000) 
+//					PCOMPANY              VARCHAR2(300)  
+//					PSTOCK                NUMBER         
+//					PIMAGE                VARCHAR2(500)  
+
 					vo = new ProductVo();			
 					vo.setpID(rs.getString("pID"));
 					vo.setpName(rs.getString("pName"));
 					vo.setpPrice(rs.getInt("pPrice"));
+					vo.setpDescription(rs.getString("pDescription"));
+					vo.setpCompany(rs.getString("pCompany"));
+					vo.setpStock(rs.getInt("pStock"));
+					vo.setPimage(rs.getString("pimage"));
 					volist.add(vo);
 				} while(rs.next());
 			}
@@ -85,6 +97,38 @@ public class ProductDao {
 //	selectOne - 상세조회
 	public ProductVo selectOne(Connection conn, String pID/*주로 PK*/){
 		ProductVo vo = null;
+		String sql = "select * from PRODUCT where  pid = ?";
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, pID);
+			rs = pstmt.executeQuery();
+			if(rs.next()) {
+				vo = new ProductVo();
+//					PID          NOT NULL VARCHAR2(30)   
+//					PNAME        NOT NULL VARCHAR2(300)  
+//					PPRICE       NOT NULL NUMBER(10)     
+//					PDESCRIPTION          VARCHAR2(4000) 
+//					PCOMPANY              VARCHAR2(300)  
+//					PSTOCK                NUMBER         
+//					PIMAGE                VARCHAR2(500)  
+				vo = new ProductVo();			
+				vo.setpID(rs.getString("pID"));
+				vo.setpName(rs.getString("pName"));
+				vo.setpPrice(rs.getInt("pPrice"));
+				vo.setpDescription(rs.getString("pDescription"));
+				vo.setpCompany(rs.getString("pCompany"));
+				vo.setpStock(rs.getInt("pStock"));
+				vo.setPimage(rs.getString("pimage"));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			jdbcTemplate.close(rs);
+			jdbcTemplate.close(pstmt);
+		}
+
 		return vo;
 	}
 }

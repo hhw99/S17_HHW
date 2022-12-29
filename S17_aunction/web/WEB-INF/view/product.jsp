@@ -44,9 +44,9 @@
 						<ul class="viewer">
 
 							<li class=" on"><a href="javascript:;"> <img
-									src="//image.auction.co.kr/itemimage/2c/81/05/2c81050426.jpg"
-									data-fallback-urls="//image.auction.co.kr/itemimage/2c/81/05/2c81050425.jpg //image.auction.co.kr/itemimage/2c/81/05/2c81050423.jpg"
-									alt="실속포장 2022년 햇 상주곶감 건시 1kg(23-38개)/ 정품 가성비 상주곶감">
+									src="${product.pimage }"
+									data-fallback-urls="${product.pimage }"
+									alt="${product.pName }">
 
 							</a></li>
 
@@ -90,7 +90,7 @@
 					<div id="hdivItemInfo"></div>
 
 					<div class="box__official-store"></div>
-					<h1 class="itemtit">상품명 db에서 읽어온값${product.pName }</h1>
+					<h1 class="itemtit">${product.pName }</h1>
 
 					<div class="box__item-made">원산지 : 경북</div>
 
@@ -120,8 +120,8 @@
 							<strong id="ucItemPrice_hdivDiscountRate" class="sale">9<span
 								class="unit">%</span></strong>
 							<div class="price_innerwrap">
-								<span id="ucItemPrice_hdivPrice" class="price_original">17,490<span
-									class="unit">원</span></span> <strong class="price_real">15,900<span
+								<span id="ucItemPrice_hdivPrice" class="price_original">${product.pPrice*1.09 }<span
+									class="unit">원</span></span> <strong class="price_real">${product.pPrice }<span
 									class="unit">원</span></strong>
 
 							</div>
@@ -270,7 +270,7 @@
 	<div id="ucItemOrderInfo_ucItemOrderButtons_hdivBuy"
 		class="item-bottombtns">
 		<form action="<%=request.getContextPath()%>/cart.do" method="post">
-			<input type="hidden" name="pid" value="1">
+			<input type="hidden" name="pid" value="${product.pID }">
 			<button class="btn_cart" type="submit">
 				장바구니
 			</button>

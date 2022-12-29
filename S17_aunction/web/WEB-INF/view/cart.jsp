@@ -14,9 +14,8 @@
     <link rel="stylesheet" href="<%=request.getContextPath() %>/css/cart.css">
     <link rel="stylesheet" href="<%=request.getContextPath() %>/css/footer.css">
 </head>
-
 <body>
-${cartlist }<hr><hr>
+
 
     <div id="header_wrap">
         <div id="core_lnb">
@@ -130,7 +129,7 @@ ${cartlist }<hr><hr>
         <div class="box__inner-content">
             <ul class="list-item__cart-type-group">
                 <li class="list__tab list--active"><a class="link__tab" data-montelena-acode="100001723"
-                        href="#"><strong class="text__tab">전체</strong><span class="for-a11y">장바구니 갯수</span><span>
+                        ><strong class="text__tab">전체</strong><span class="for-a11y">장바구니 갯수</span><span>
                         </span>
                   
                 </li>
@@ -141,11 +140,31 @@ ${cartlist }<hr><hr>
     </div>
     <div id="cart__body" class="section__cart-body">
         <div class="box__inner-content box__inner-content--empty">
-            <div class="box__cart-empty"><strong class="text__message image__empty-cart">장바구니에 담긴 상품이 없습니다.</strong><a
+       <table>
+	    <tr>
+		    <td>사진</td>
+		    <td>상품명</td>
+		    <td>개수</td>
+		    <td>가격</td>
+	    </tr>
+    <c:forEach items="${cartlist }" var="vo">
+<%-- <a href="<%=request.getContextPath()%>/product?pid=${vo.pID }"> --%> 
+       	<tr onclick="location.href='<%=request.getContextPath()%>/product?pid=${vo.pID }'">
+		    <td><img src="${vo.pimage }" width="200" height="200"></td>
+		    <td>${vo.pName }</td>
+		    <td>${vo.amount }</td>
+		     <td>${vo.price }</td>
+       	</tr>
+		
+  
+    </c:forEach>
+    </table>
+            <div class="box__cart-empty"><a
                     data-montelena-acode="100001744" class="link__historyback" href="${pageContext.request.contextPath }/main"><span
                         class="text__back">홈으로 가기</span></a></div>
         </div>
     </div>
+   
     <div class="box__toast-popup " aria-live="polite" style="visibility: hidden; opacity: 0;">
         <p class="text">아차! 새벽배송이 마감되었어요.<span class="text__imoji">😓</span><br>걱정마세요! <span class="text__emphasis">지금
                 주문하면 내일 받을 수 있어요!</span></p>

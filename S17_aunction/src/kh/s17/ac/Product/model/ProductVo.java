@@ -1,6 +1,13 @@
 package kh.s17.ac.Product.model;
 
 public class ProductVo {
+//	PID          NOT NULL VARCHAR2(30)   
+//	PNAME        NOT NULL VARCHAR2(300)  
+//	PPRICE       NOT NULL NUMBER(10)     
+//	PDESCRIPTION          VARCHAR2(4000) 
+//	PCOMPANY              VARCHAR2(300)  
+//	PSTOCK                NUMBER         
+//	PIMAGE                VARCHAR2(500)  
 
 	private String pID;
 	private String pName;
@@ -8,6 +15,7 @@ public class ProductVo {
 	private String pDescription;
 	private String pCompany;
 	private int pStock;
+	private String pimage;
 
 	public ProductVo() {
 		super();
@@ -16,7 +24,7 @@ public class ProductVo {
 	@Override
 	public String toString() {
 		return "ProductVo [pID=" + pID + ", pName=" + pName + ", pPrice=" + pPrice + ", pDescription=" + pDescription
-				+ ", pCompany=" + pCompany + ", pStock=" + pStock + "]";
+				+ ", pCompany=" + pCompany + ", pStock=" + pStock + ", pimage=" + pimage + "]";
 	}
 
 	public String getpID() {
@@ -66,5 +74,14 @@ public class ProductVo {
 	public void setpStock(int pStock) {
 		this.pStock = pStock;
 	}
+
+	public String getPimage() {
+		return pimage;
+	}
+
+	public void setPimage(String pimage) {
+		this.pimage = pimage;
+	}
+
 
 }

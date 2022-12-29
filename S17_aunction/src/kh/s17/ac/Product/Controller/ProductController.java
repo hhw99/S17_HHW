@@ -29,7 +29,10 @@ public class ProductController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		ProductVo vo = new ProductService().selectOne("1");
+		String pid = request.getParameter("pid");
+		System.out.println("상품번호:"+ pid);
+		
+		ProductVo vo = new ProductService().selectOne(pid);
 		
 		request.setAttribute("product", vo);
 		String viewPath="WEB-INF/view/product.jsp";

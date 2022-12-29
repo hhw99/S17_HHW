@@ -1,3 +1,8 @@
+.link__tab > table {
+	margin-left: 270px;
+	margin-top : 20px;
+	
+}
 .box__title .text__title {
     font-size: 30px;
     line-height: 40px;
@@ -142,3 +147,5 @@ a {
     font-size: 15px;
     font-weight: bold;
 }
+
+

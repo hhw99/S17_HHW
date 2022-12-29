@@ -41,11 +41,11 @@ public class CartInsertDocontroller extends HttpServlet {
 		System.out.println("여기 들어오나???????");
 //		String amountStr = request.getParameter("amount"); 
 		//TODO
-		int amount = 2;
+		int amount = 1;
 		
-//		String pID = request.getParameter("pid");
-		//TODO
-		String pID = "1";
+		String pID = request.getParameter("pid");
+		System.out.println("####"+pID);
+		
 		String memberId = "";
 		MemberVo membervo = (MemberVo)(request.getSession().getAttribute("loginSsInfo"));
 		if(membervo != null) {
