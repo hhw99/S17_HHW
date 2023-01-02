@@ -1810,7 +1810,7 @@
 
 
 			</div>
-			f
+			
 		</div>
 		<div class="footer" role="contentinfo">
 			<div class="footer-block footer-block-cs">

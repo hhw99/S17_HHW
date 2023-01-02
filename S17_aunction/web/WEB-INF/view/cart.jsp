@@ -3,6 +3,7 @@
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>  
 <!DOCTYPE html>
 <html lang="en">
+    <link rel="stylesheet" href="<%=request.getContextPath() %>/css/cart.css">
 
 <head>
     <meta charset="UTF-8">
@@ -11,7 +12,6 @@
     <title>Document</title>
     <link rel="stylesheet" href="<%=request.getContextPath() %>/css/reset.css">
     <link rel="stylesheet" href="<%=request.getContextPath() %>/css/header.css">
-    <link rel="stylesheet" href="<%=request.getContextPath() %>/css/cart.css">
     <link rel="stylesheet" href="<%=request.getContextPath() %>/css/footer.css">
 </head>
 <body>
